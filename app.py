@@ -51,6 +51,7 @@ hari_list = {
     "Saturday": "Sabtu",
     "Sunday": "Minggu",
 }
+
 bulan_list = {
     1: "Januari",
     2: "Februari",
@@ -71,6 +72,8 @@ tz_wib = pytz.timezone("Asia/Jakarta")
 now = datetime.now(pytz.utc).astimezone(tz_wib)
 
 tanggal_tanda_tangan = f"{hari_list[now.strftime('%A')]}, {now.day} {bulan_list[now.month]} {now.year} pukul {now.strftime('%H:%M')} WIB"
+
+# Menggunakan st.query_params yang kompatibel dengan versi Streamlit terbaru
 halaman = st.query_params.get("halaman", "awal")
 
 st.markdown(
@@ -78,26 +81,26 @@ st.markdown(
     unsafe_allow_html=True,
 )
 st.markdown(
-    "<div class='header-title'>PT BANK PEREKONOMIAN RAKYAT<br>BANK DAERAH"
-    " PATI</div>",
+    "<div class='header-title'>PT BANK PEREKONOMIAN RAKYAT<br>BANK DAERAH PATI</div>",
     unsafe_allow_html=True,
 )
 st.markdown("<hr class='rule'>", unsafe_allow_html=True)
+
 if halaman == "disahkan":
-  st.markdown(
-      "<div class='verified-panel'>✔ NASKAH INI TELAH DISAHKAN DAN"
-      " TERVERIFIKASI</div>",
-      unsafe_allow_html=True,
-  )
+    st.markdown(
+        "<div class='verified-panel'>✔ NASKAH INI TELAH DISAHKAN DAN TERVERIFIKASI</div>",
+        unsafe_allow_html=True,
+    )
+
 st.markdown(
     "<span class='badge-status'>✔ RESMI &amp; TERVERIFIKASI</span>",
     unsafe_allow_html=True,
 )
 st.markdown(
-    "<p class='intro'><b>Naskah ini telah ditandatangani secara sah oleh"
-    " :</b></p>",
+    "<p class='intro'><b>Naskah ini telah ditandatangani secara sah oleh :</b></p>",
     unsafe_allow_html=True,
 )
+
 st.markdown(
     f"""
     <div class='card-inside'>
@@ -111,6 +114,7 @@ st.markdown(
     """,
     unsafe_allow_html=True,
 )
+
 st.markdown(
     "<div class='footer'>© 2026 PT BPR Bank Daerah Pati</div>",
     unsafe_allow_html=True,
