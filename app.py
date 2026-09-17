@@ -12,6 +12,8 @@ st.markdown(
     """
     <style>
     @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap');
+    [data-testid="stStatusWidget"] {display: none;}
+    .stAppDeployButton {display: none;}
     :root { --navy: #082b61; --blue: #1261b0; --cyan: #28b8d7; --ink: #13243b; --muted: #62738b; --line: #d8e5f2; }
     .stApp { min-height: 100vh; background: radial-gradient(circle at 8% 4%, rgba(40,184,215,.20), transparent 28%), radial-gradient(circle at 95% 18%, rgba(18,97,176,.18), transparent 30%), linear-gradient(145deg, #eef7ff 0%, #f7fbff 53%, #e8f1fb 100%); color: var(--ink); font-family: 'DM Sans', sans-serif; }
     .stApp > header, [data-testid='stHeader'] { background: transparent; }
